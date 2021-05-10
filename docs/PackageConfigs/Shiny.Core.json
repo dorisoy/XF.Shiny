@@ -1,0 +1,24 @@
+﻿{
+    "name": "Shiny.Core",
+    "description": "Core Services for Shiny",
+    "order":  1,
+
+    "services": [
+        {
+            "name": "Shiny.Jobs.IJobManager",
+            "static": "ShinyJobs",
+            "startup": "services.RegisterJob",
+            "platforms": [
+                {
+                    "platform": "iOS"
+                },
+                {
+                    "platform": "Android"
+                },
+                {
+                    "platform": "UWP"
+                }
+            ]
+        }
+    ]
+}

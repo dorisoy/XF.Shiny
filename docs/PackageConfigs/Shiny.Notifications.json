@@ -1,0 +1,25 @@
+﻿{
+    "name": "Shiny.Notifications",
+    "description": "Local Notifications",
+
+    "services": [
+        {
+            "name": "Shiny.Notifications.INotificationManager",
+            "static": "ShinyNotifications",
+            "startup": "services.UseNotifications",
+            "bgDelegate": "Shiny.Notifications.INotificationDelegate",
+            "bgDelegateRequired": false,
+            "platforms": [
+                {
+                    "platform": "iOS"
+                },
+                {
+                    "platform": "Android"
+                },
+                {
+                    "platform": "UWP"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+                  xmlns:samples="clr-namespace:Samples"
+                  ios:Page.UseSafeArea="true"
+                  ios:Page.LargeTitleDisplay="Always"
+                  x:DataType="samples:MainViewModel"
+                  x:Class="Samples.MainPage"
+                  Title="Shiny"
+                  IsPresented="{Binding IsPresented}">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="菜单">
+            <TableView Intent="Menu">
+                <TableRoot>
+                    <TableSection Title="基础"
+                                  TextColor="Black">
+                        <!--<TextCell Text="Test" Command="{Binding Navigate}" CommandParameter="Nav/Test" />-->
+                        <TextCell Text="Welcome"
+                                  Command="{Binding Navigate}"
+                                  CommandParameter="Nav/Welcome" />
+                        <TextCell Text="Access"
+                                  Command="{Binding Navigate}"
+                                  CommandParameter="Nav/Access" />
+                        <TextCell Text="Logs"
+                                  Command="{Binding Navigate}"
+                                  CommandParameter="Nav/Logs" />
+                        <TextCell Text="Test Log Providers"
+                                  Command="{Binding Navigate}"
+                                  CommandParameter="Nav/TestLogProviders" />
+                        <TextCell Text="Delegate Notifications"
+                                  Command="{Binding Navigate}"
+                                  CommandParameter="Nav/DelegateNotifications" />
+                    </TableSection>
+                    <TableSection Title="蓝牙"
+                                  TextColor="Black">
+                        <TextCell Text="Peripheral Scan"
+                                  Command="{Binding Navigate}"
+                                  CommandParameter="Nav/BleCentral" />
+                        <TextCell Text="Peripheral Scan (Managed)"
+                                  Command="{Binding Navigate}"
+                                  CommandParameter="Nav/BleManagedScan" />
+                        <TextCell Text="Perf Tests"
+                                  Command="{Binding Navigate}"
+                                  CommandParameter="Nav/BlePerformance" />
+                        <TextCell Text="Hosting"
+                                  Command="{Binding Navigate}"
+                                  CommandParameter="Nav/BleHosting" />
+                    </TableSection>
+                    <TableSection Title="位置"
+                                  TextColor="Black">
+                        <TextCell Text="GPS"
+                                  Command="{Binding Navigate}"
+                                  CommandParameter="Nav/Gps" />
+                        <TextCell Text="Geofencing"
+                                  Command="{Binding Navigate}"
+                                  CommandParameter="Nav/Geofencing" />
+                        <TextCell Text="Beacons"
+                                  Command="{Binding Navigate}"
+                                  CommandParameter="Nav/Beacons" />
+                        <TextCell Text="Beacon Scan (Managed)"
+                                  Command="{Binding Navigate}"
+                                  CommandParameter="Nav/BeaconsManaged" />
+                        <TextCell Text="Motion Activity"
+                                  Command="{Binding Navigate}"
+                                  CommandParameter="Nav/MotionActivity" />
+                        <TextCell Text="Test Motion Activity"
+                                  Command="{Binding Navigate}"
+                                  CommandParameter="Nav/TestMotionActivity" />
+                    </TableSection>
+                    <TableSection Title="通知"
+                                  TextColor="Black">
+                        <TextCell Text="Push（推送）"
+                                  Command="{Binding Navigate}"
+                                  CommandParameter="Nav/Push" />
+                        <TextCell Text="Local（本地）"
+                                  Command="{Binding Navigate}"
+                                  CommandParameter="Nav/Notifications" />
+                        <TextCell Text="Badges（标记）"
+                                  Command="{Binding Navigate}"
+                                  CommandParameter="Nav/Badges" />
+                    </TableSection>
+                    <TableSection Title="其它"
+                                  TextColor="Black">
+                        <TextCell Text="HTTP Transfers"
+                                  Command="{Binding Navigate}"
+                                  CommandParameter="Nav/HttpTransfers" />
+                        <TextCell Text="NFC"
+                                  Command="{Binding Navigate}"
+                                  CommandParameter="Nav/Nfc" />
+                        <TextCell Text="Speech Recognition"
+                                  Command="{Binding Navigate}"
+                                  CommandParameter="Nav/SpeechRecognition" />
+                    </TableSection>
+                    <TableSection Title="传感器"
+                                  TextColor="Black">
+                        <TextCell Text="All"
+                                  Command="{Binding Navigate}"
+                                  CommandParameter="Nav/Sensors" />
+                        <TextCell Text="Compass"
+                                  Command="{Binding Navigate}"
+                                  CommandParameter="Nav/Compass" />
+                    </TableSection>
+                    <TableSection Title="内核"
+                                  TextColor="Black">
+                        <TextCell Text="Platform"
+                                  Command="{Binding Navigate}"
+                                  CommandParameter="Nav/Platform" />
+                        <TextCell Text="Jobs"
+                                  Command="{Binding Navigate}"
+                                  CommandParameter="Nav/Jobs" />
+                        <TextCell Text="Settings/Secure Storage"
+                                  Command="{Binding Navigate}"
+                                  CommandParameter="Nav/Stores" />
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+</MasterDetailPage>
